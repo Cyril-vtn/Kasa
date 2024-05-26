@@ -1,0 +1,36 @@
+.card {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  background-size: cover;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 335px;
+    height: 255px;
+  }
+  
+  .card-overlay {
+    position: absolute;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(10, 10, 10, 0) 42%,
+      rgba(4, 4, 4, 0.2) 99.99%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+  }
+}
