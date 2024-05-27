@@ -1,5 +1,5 @@
 import { Header } from "./components/Header";
-import logo from "./assets/footer.png";
+import { Footer } from "./components/Footer";
 
 export const Layout = ({children}) => {
   return (
@@ -8,10 +8,7 @@ export const Layout = ({children}) => {
         <Header />
         <main>{children}</main>
       </div>
-      <footer>
-        <img src={logo} alt="logo" />
-        <p>© 2020 Kasa. All rights reserved</p>
-      </footer>
+      <Footer/>
     </>
   );
 };
