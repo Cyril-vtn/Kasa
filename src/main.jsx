@@ -6,7 +6,7 @@ import { Layout } from "./Layout";
 import About from "./Pages/About";
 import ErrorPage from "./Pages/ErrorPage";
 import "./styles.scss";
-import { Accommodation } from "./Pages/Accommodation";
+import { Accommodation } from "./Pages/accommodation/Accommodation.jsx";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
