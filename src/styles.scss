@@ -19,7 +19,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  font-family: $font-stack;
+  font-family: $font;
   vertical-align: baseline;
 }
 
@@ -89,7 +89,7 @@ h6 {
 
 /* Your custom styles go here */
 body {
-  font-family: $font-stack;
+  font-family: $font;
   max-width: 1440px;
   margin: 0 auto;
 
@@ -136,12 +136,12 @@ body {
           }
 
           a {
-            color: $primary-color;
+            color: $gray;
             font-size: 24px;
             font-weight: 500;
 
             &:hover {
-              color: $hover-color;
+              color: $red;
             }
 
             @media (max-width: 768px) {
@@ -164,9 +164,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: $footer-bg;
+    background: $dark;
     padding: 66px 0 29px 0;
     gap: 26px;
+    img {
+      color: $white;
+    }
 
     @media (max-width: 375px) {
       gap: 0;
@@ -174,7 +177,7 @@ body {
     }
 
     p {
-      color: $footer-color;
+      color: $white;
       font-size: 24px;
       font-weight: 400;
 
