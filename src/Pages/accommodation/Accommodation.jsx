@@ -7,6 +7,7 @@ import { Tag } from "../../components/Tag";
 import { useMemo } from "react";
 import { StarRating } from "../../components/StarRating";
 import { Slider } from "../../components/Slider";
+import { Dropdown } from "../../components/Dropdown";
 
 export const Accommodation = () => {
   // get the id from the url using react router
@@ -62,6 +63,10 @@ export const Accommodation = () => {
               </div>
               <StarRating rating={rating} />
             </div>
+          </div>
+          <div className="accommodation_description">
+            <Dropdown description={accommodation?.description} label="Description" />
+            <Dropdown list={accommodation?.equipments} label="Equipements" />
           </div>
         </div>
       )}
