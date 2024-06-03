@@ -1,0 +1,14 @@
+@import "../styles/root.scss";
+
+.star_rating {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  .star_filled {
+    color: $red;
+  }
+  .star_empty {
+    color: $light-gray;
+  }
+}
