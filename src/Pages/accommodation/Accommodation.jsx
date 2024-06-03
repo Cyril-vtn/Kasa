@@ -37,10 +37,6 @@ export const Accommodation = () => {
     <div>
       {accommodation && (
         <div className="accommodation_container">
-          {/* <div
-            className="accommodation_image"
-            style={{ backgroundImage: `url(${accommodation.cover})` }}
-          ></div> */}
           <Slider images={accommodation.pictures} />
           <div className="accommodation_content">
             <div className="accommodation_text">
