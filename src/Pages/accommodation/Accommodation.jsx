@@ -6,6 +6,7 @@ import "./accommodation.scss";
 import { Tag } from "../../components/Tag";
 import { useMemo } from "react";
 import { StarRating } from "../../components/StarRating";
+import { Slider } from "../../components/Slider";
 
 export const Accommodation = () => {
   // get the id from the url using react router
@@ -36,10 +37,11 @@ export const Accommodation = () => {
     <div>
       {accommodation && (
         <div className="accommodation_container">
-          <div
+          {/* <div
             className="accommodation_image"
             style={{ backgroundImage: `url(${accommodation.cover})` }}
-          ></div>
+          ></div> */}
+          <Slider images={accommodation.pictures} />
           <div className="accommodation_content">
             <div className="accommodation_text">
               <h1>{accommodation.title}</h1>
