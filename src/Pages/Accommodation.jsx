@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import data from "../data/logements.json";
-import ErrorPage from "./ErrorPage";
+import ErrorPage from "./Error404";
 import "../styles/accommodation.scss";
 import { Tag } from "../components/Tag";
 import { useMemo } from "react";
@@ -62,7 +62,7 @@ export default function Accommodation () {
           </div>
           <div className="accommodation_description">
             <Dropdown description={accommodation.description} label="Description" />
-            <Dropdown list={accommodation.equipments} label="Equipements" />
+            <Dropdown list={accommodation.equipments} label="Équipements" />
           </div>
         </div>
       )}
