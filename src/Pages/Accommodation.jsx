@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import data from "../../data/logements.json";
-import ErrorPage from "../ErrorPage";
-import "./accommodation.scss";
-import { Tag } from "../../components/Tag";
+import data from "../data/logements.json";
+import ErrorPage from "./ErrorPage";
+import "../styles/accommodation.scss";
+import { Tag } from "../components/Tag";
 import { useMemo } from "react";
-import { StarRating } from "../../components/StarRating";
-import { Slider } from "../../components/Slider";
-import { Dropdown } from "../../components/Dropdown";
+import { StarRating } from "../components/StarRating";
+import { Slider } from "../components/Slider";
+import { Dropdown } from "../components/Dropdown";
 
-export const Accommodation = () => {
-  // get the id from the url using react router
+export default function Accommodation () {
   const { id } = useParams();
   const [accommodation, setAccommodation] = useState();
   const rating = useMemo(() => {
@@ -21,13 +20,10 @@ export const Accommodation = () => {
   }, [accommodation]);
 
   useEffect(() => {
-    // find the accommodation with the id from the url
     const filteredaccommodation = data.find(
       (accommodation) => accommodation.id === id
     );
-    // set the accommodation in the state
     setAccommodation(filteredaccommodation);
-    console.log(filteredaccommodation);
   }, [id]);
 
   if (!accommodation) {
@@ -65,11 +61,11 @@ export const Accommodation = () => {
             </div>
           </div>
           <div className="accommodation_description">
-            <Dropdown description={accommodation?.description} label="Description" />
-            <Dropdown list={accommodation?.equipments} label="Equipements" />
+            <Dropdown description={accommodation.description} label="Description" />
+            <Dropdown list={accommodation.equipments} label="Equipements" />
           </div>
         </div>
       )}
     </div>
   );
-};
+}

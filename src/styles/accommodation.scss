@@ -1,4 +1,4 @@
-@import "../../styles/root.scss";
+@import "./root.scss";
 
 .accommodation_container {
   display: flex;
@@ -32,7 +32,6 @@
       gap: 10px;
       margin-top: 20px;
       .tag {
-        width: 115px;
         height: 25px;
         display: flex;
         justify-content: center;
@@ -42,8 +41,8 @@
         font-size: 14px;
         font-weight: 500;
         border-radius: 10px;
-        flex-wrap: wrap;
         align-items: center;
+        padding: 0 20px;
       }
     }
     .accommodation_nameRate {
