@@ -11,9 +11,9 @@ export const Dropdown = ({ list, label, description }) => {
         <p className="dropdown_title">{label}</p>
         
           {isOpen ? (
-            <IoIosArrowDown size={32} className="dropdown_arrow" />
+            <IoIosArrowDown className="dropdown_arrow" />
           ) : (
-            <IoIosArrowUp size={32} className="dropdown_arrow" />
+            <IoIosArrowUp className="dropdown_arrow" />
           )}
         
       </div>
