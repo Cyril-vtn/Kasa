@@ -5,10 +5,20 @@
   display: flex;
   gap: 10px;
   justify-content: flex-end;
+  @media screen and (max-width: 768px){
+    justify-content: flex-start;
+    gap: 5px;
+  }
   .star_filled {
     color: $red;
+    @media screen and (max-width: 768px){
+      width: 18px;
+    }
   }
   .star_empty {
     color: $light-gray;
+    @media screen and (max-width: 768px){
+    width: 18px;
+  }
   }
 }
