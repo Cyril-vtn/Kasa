@@ -1,35 +1,37 @@
 import { useState } from "react";
 import "../styles/dropdown.scss";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 export const Dropdown = ({ list, label, description }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null);
+  const [maxHeight, setMaxHeight] = useState("0px");
+
+  useEffect(() => {
+    setMaxHeight(isOpen ? `${contentRef.current.scrollHeight}px` : "0px");
+  }, [isOpen]);
 
   return (
     <div className="dropdown_container">
       <div className="dropdown_header" onClick={() => setIsOpen(!isOpen)}>
         <p className="dropdown_title">{label}</p>
-        
-          {isOpen ? (
-            <IoIosArrowDown className="dropdown_arrow" />
-          ) : (
-            <IoIosArrowUp className="dropdown_arrow" />
-          )}
-        
+        <IoIosArrowUp className={`dropdown_arrow ${isOpen ? "rotate" : ""}`} />
       </div>
-      {isOpen && (
-        <div className="dropdown_list">
+      <div className="dropdown_list" style={{ maxHeight }} ref={contentRef}>
+        <div className="dropdown_content">
           {list ? (
             list.map((item, index) => (
-              <div key={index} className="dropdown_item">
+              <div key={index}>
                 <p>{item}</p>
               </div>
             ))
           ) : (
-            <p className="dropdown_description">{description}</p>
+            <p>{description}</p>
           )}
         </div>
-      )}
+      </div>
     </div>
-  )
-}
+  );
+};
