@@ -46,11 +46,13 @@
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
     @media screen and (max-width: 768px){
-      padding: 13px;
       font-size: 12px;
     }
     .dropdown_content {
       padding: 20px;
+      @media screen and (max-width: 768px){
+        padding: 13px;
+      }
     }
   }
 }
