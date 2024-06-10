@@ -1,14 +1,14 @@
 import "../styles/home.scss";
 import data from "../data/logements.json";
 import { Card } from "../components/Card";
+import { OverlayCard } from "../components/OverlayCard";
+import img from '../assets/home-background.png';
 
 export default function Home() {
+  console.log(data);
   return (
     <div className="page-wrapper">
-      <div className="header-wrapper">
-        <div className="background-overlay"></div>
-        <h1>Chez vous, partout et ailleurs</h1>
-      </div>
+      <OverlayCard image={img} text={"Chez vous, partout et ailleurs"} />
       <div className="content-wrapper">
         {data.map((logement) => {
           return (

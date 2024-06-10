@@ -6,45 +6,6 @@
   align-items: center;
   flex-direction: column;
   margin-top: 50px;
-  .header-wrapper {
-    position: relative;
-    height: 223px;
-    width: 100%;
-    display: grid;
-    place-items: center;
-    border-radius: 25px;
-    background-image: url("../assets/header-background.png");
-    background-size: cover;
-    background-position: center;
-    @media screen and (max-width: 768px){
-      border-radius: 10px;
-      height: 111px;
-    }
-    .background-overlay {
-      position: absolute;
-      border-radius: 25px;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      @media screen and (max-width: 768px) {
-        border-radius: 10px;
-      }
-    }
-    h1 {
-      color: $white;
-      font-size: 48px;
-      font-weight: bold;
-      z-index: 1;
-      @media screen and (max-width: 768px) {
-          font-size: 24px;
-          margin: 0 0 0 16px;
-      }
-      @media screen and (max-width: 425px) {
-          padding-right: 85px; 
-      }
-    }
-  }
-
   .content-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -55,7 +16,6 @@
     @media (max-width: 1024px) {
       grid-template-columns: repeat(2, 1fr);
     }
-  
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
       padding: 22px 0 0 0;
