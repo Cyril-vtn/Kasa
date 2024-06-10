@@ -1,9 +1,15 @@
 @import "./root.scss";
-
+.background_gray {
+  background-color: rgba(red($lighter-gray), green($lighter-gray), blue($lighter-gray), 0.45);
+}
 .dropdown_container {
   width: 100%;
   display: flex;
   flex-direction: column;
+  height: fit-content;
+  transition: all 0.5s ease-in-out;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   .dropdown_header {
     padding: 10px;
     border-radius: 10px;

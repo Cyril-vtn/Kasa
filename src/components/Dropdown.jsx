@@ -14,7 +14,7 @@ export const Dropdown = ({ list, label, description }) => {
   }, [isOpen]);
 
   return (
-    <div className="dropdown_container">
+    <div className={`dropdown_container ${isOpen ? 'background_gray' : ''}`}>
       <div className="dropdown_header" onClick={() => setIsOpen(!isOpen)}>
         <p className="dropdown_title">{label}</p>
         <IoIosArrowUp className={`dropdown_arrow ${isOpen ? "rotate" : ""}`} />
