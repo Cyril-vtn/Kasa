@@ -5,7 +5,6 @@ import { OverlayCard } from "../components/OverlayCard";
 import img from '../assets/home-background.png';
 
 export default function Home() {
-  console.log(data);
   return (
     <div className="page-wrapper">
       <OverlayCard image={img} text={"Chez vous, partout et ailleurs"} />
